@@ -1,0 +1,13 @@
+The ENCODER Part of Transformer:
+	The Encoder part of transformer consists of two main parts:
+		1: Self Attention/Multi Head Attention block.
+		2: Feed Forward Block.
+And also some other small units like layer Normalization and Residual connections.
+Let's say we have a sentence "How are you?" 
+Now how will encoder part of the transformer will process it.
+First of all these sentence will be break down to tokens like "How", "are" and "you" and then by word embedding static vectors will be created of these words let's say z1,z2 and z3. Then there will be 3 more vectors of same dimensions which will have the positional information of the word i-e Positional Encoding let's say p1, p2 and p3. Then each Embedding vector will be added to their respective Positional encoding vector and 3 new vectors of same dimensions will be there z1', z2' and z3'.
+Now these vectors will be given as input to the multi head and 3 new contextual dynamic vectors will be generated which then will be given to layer normalization block to normalize the vectors. (Normalization is done because to stabilize the training because without it the vectors are unbounded and can have large values which can lead to VANISHING OR EXPLOIDING GRADIENT).
+Then after normalization 3 new vectors will be there let's say z1'Norm, z2'Norm and z3'Norm and in the original paper the dimensions of these vector are 512 so we will consider that and they will be given to the feed forward block.
+Now in the original paper the feed forward block has two layers except input layer which is 512 units.
+The first hidden Layer has 2048 neurons with RELU activation function in there nodes while the Output layer has again 512 units with linear activation function in there nodes. 
+This increasing of units in hidden layer (2048) is for introducing non-linearity of the data. After the output layer we will have 3*512 matrix where 3 is the number of vectors and 512 are the dimensions. Now again it will be given to normalization layer to normalize the output to get y1Norm, y2Norm and y3Norm and then will be given to next encoder or decoder depend on architecture.

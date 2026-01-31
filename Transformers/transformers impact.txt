@@ -1,0 +1,17 @@
+Transformers:
+	Transformers are nothing but just like ANN, CNN and RNN's a neural network which is created for sequence 2 sequence data. Just like other seq2seq models transformers also consists of encoders and decoders but here instead of LSTM a form of attention is used called self attention with the help of which parallel sentence processing can be done and due to which transformers become very scalable and could process huge amount of data. 
+
+Impact of transformers on TECH and AI world:
+1: Revolution in NLP:
+		  NLP is the one field for which initially transformers were created for. In fact the most impact of transformers is in NLP field till now. For the last 50 years scientists were trying to talk to machine like they talk they humans. For this a lot of methods were applied like heuristic methods, then different statistical machine learning models like SVM, hidden Markov models etc. And in early deep learning embedding was introduced, LSTM's were used for NLP tasks. But transformers are the one which give the state of the art result for NLP tasks. Transformers can handle and give accurate result for a lot of big problems of NLP. We can see the biggest example as any Ai chat model like chatgpt, gemini etc.
+In short the progress which was estimated to be done in the next 30 to 40 years in NLP, it is done in last 3 to 5 years all because of transformers.
+
+Democratizing Ai:
+		Transformers made it possible to use other LLM's just because of In CONTEXT LEARNING of LLM's which are trained on a very huge amount of data. And although they are trained on very huge amount of data we can fine tune them to our specific field. In short now every new start which want to do something related to NLP can use these pre trained transformers like BERT and GPT's to fine tune them on their specific dataset and they can get SOTA result which was impossible before transformers.
+
+Multi Model Capability of transformers:
+			Transformers are not just good with text but also good with images, speech and videos. Which basically means we can give image as an input and can get image, text, or speech we can get. Which means that transformers are so scalable it can be used with different modality of inputs and outputs. This can be done because of different types of representation of inputs to transformers. Like for example if we are giving text as an input to transformers we convert them into a special representation and then apply the power of transformers so if we convert images and speech to the same representation transformers can work with them too and can give a lot of better results. Due to this a lot of multi models are developed now and is used by millions of users like for example chatgpt, gemini etc. And this is the best part of transformer.
+
+Acceleration of GENAI:
+		GENAI is a sub field of Ai where we generate new data like text, images, videos etc. For this a lot of models were introduced like GAN's etc to generate images but that process was too slow and were not good enough for industry level. But when transformers came into the view they just gave a huge boost to GENAI. Like I said above because of multi model capability of transformers they can be used to not only generate text but image, videos etc and is using by a lot of big companies in their products. 
+

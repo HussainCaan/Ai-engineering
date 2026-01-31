@@ -1,0 +1,22 @@
+What is Positional Encoding and why it's needed in transformers:
+		As we all know that self attention generate new contextual base dynamic embedding vectors and also these embeddings can be generated parallelly while RNN's are inherently sequential and slow. But as self attention can do it parallelly so it does not know about the order of the words. It does not know that which word come first and which come second which is a big issue.
+
+For example:
+Sentence 1: A man killed a lion. 
+Sentence 2: A Lion killed a man.
+For self attention that both sentences are same which is not good for any NLP task. So we now some how has to give each word embedding some position information which can go to SELF attention block of transformer to know the order.
+
+For that scientists thought of we should have a function which should be bounded i-e in between a range because NN's hate unbounded numbers like very large numbers. 
+Also the function should be continuous to capture the relative positioning.
+So one of these like functions is sin function of trigonometry. 
+It's bounded (-1, 1), it's continuous but the one problem is that it's periodic and repeat after sometime. Which means that word at position one could have same value with a word which may come value and self attention will think they both are on the same Position. So for solving this they thought why using one trigonometric function use two trigonometric functions sinQ, CosQ which could generate a same dimension of Vector which is our input embedding vector (512 dimensions) and then both are added with each other to get a new 512 Dimensions Vector which has both the context and positions of the words.
+Different Value of the P.E vector are calculated by 
+PE(pos, 2i) = sin(pos / 10000^(2i / d_model))
+and 
+PE(pos, 2i+1) = cos(pos / 10000^(2i / d_model))
+
+POS: Position of the word in sentence
+i: The specific dimension index of the embedding (from 0 to d_model)
+d_model: it's the dimensions of the embedding vector(in this case 512)
+
+This simple idea is one of the reasons Transformers replaced RNNs.
