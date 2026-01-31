@@ -1,0 +1,4 @@
+Human: Hello!
+Ai: Hi! How can I help you today?
+Human: Can you briefly explain the theory of relativity?
+Ai: Sure — in short: relativity describes how space and time relate to energy, mass, and motion.

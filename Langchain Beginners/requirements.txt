@@ -1,0 +1,32 @@
+# Langchain core
+langchain
+langchain-core
+
+# Open Ai Integration
+openai
+langchain-openai
+
+# Anthropic Integration
+langchain-anthropic
+
+# Google Gemini (PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face Integration
+langchain-huggingface
+transformers
+huggingface-hub
+
+# Environment variable management
+python-dotenv
+
+# Machine learning utilities
+scikit-learn
+numpy
+pandas
+
+# PDF text extraction
+pdfplumber
+pdfminer.six
+PyMuPDF
