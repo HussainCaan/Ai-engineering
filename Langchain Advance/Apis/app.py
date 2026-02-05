@@ -47,4 +47,13 @@ prompt2 = ChatPromptTemplate.from_template("Write me a eassy about {topic} in 4 
 add_routes(
     app,
     prompt1 | model | StrOutputParser(),
+    path="/poem"
 )
+add_routes(
+    app,
+    prompt2 | model2 | StrOutputParser(),
+    path="/eassy"
+)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host = "localhost", port=8000)
