@@ -6,4 +6,4 @@ __pycache__/
 *.so
 .DS_Store
 node_modules/
-.
+chroma_db
