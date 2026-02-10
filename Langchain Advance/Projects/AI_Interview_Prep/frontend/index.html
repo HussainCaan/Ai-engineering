@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Interview Prep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <div>
+          <p class="eyebrow">AI Interview Prep</p>
+          <h1>Candidate Intelligence Desk</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span class="pill pill-soft">UI only</span>
+        <span class="pill pill-live">Hook your JS</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel input-panel">
+        <div class="panel-head">
+          <h2>Profile Inputs</h2>
+          <p>Upload your CV and the target job description to kick off the RAG + LLM flow.</p>
+        </div>
+
+        <div class="field">
+          <label for="resume">CV upload</label>
+          <div class="file-box" data-slot="resume-dropzone">
+            <p class="file-title">Drop PDF/DOCX here or browse</p>
+            <p class="file-hint">Max 10MB. Status: <span class="status-dot"></span><span class="status-label" data-slot="resume-status">Waiting</span></p>
+            <input type="file" id="resume" class="file-input" accept=".pdf,.doc,.docx" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="job-desc">Job description</label>
+          <textarea id="job-desc" rows="6" placeholder="Paste the JD text here"></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" data-action="analyze">Analyze profile</button>
+          <button class="btn btn-ghost" type="button" data-action="clear">Reset</button>
+        </div>
+
+        <div class="chips">
+          <span class="pill">RAG extracts: projects, skills, responsibilities</span>
+          <span class="pill pill-soft">LLM: questions + chatbot</span>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="panel-head">
+         <h2 id="Score">Score:</h2>
+        </div>
+
+        <div class="panel-head space-top">
+          <h2>Question Bank</h2>
+          <p>LLM-generated prompts based on your profile.</p>
+        </div>
+
+        <div class="chat-card">
+          <div class="chat-head">
+            <div>
+              <p class="eyebrow">Mock Interview Chatbot</p>
+              <h3>Practice in real time</h3>
+            </div>
+            <span class="pill pill-live">LLM powered</span>
+          </div>
+
+          <div class="chat-window" data-slot="chat-window">
+            <div class="msg bot">Hi! I am ready to run a mock interview. Share your role and stack.</div>
+            <div class="msg user">Role: Senior Backend Engineer. Stack: Python, FastAPI, Postgres, Docker.</div>
+            <div class="msg bot">Great. I will ask a mix of behavioral and system design. Ready?</div>
+          </div>
+
+          <div class="chat-input">
+            <input type="text" placeholder="Type your reply or start a new session" aria-label="Chat input">
+            <button class="btn btn-primary" type="button" data-action="send">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
