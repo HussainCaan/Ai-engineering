@@ -1,0 +1,14 @@
+.env
+.env.local
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.DS_Store
+node_modules/
+chroma_db
+faiss_db
+Random Forests.pdf
+kNN.pdf
+Support Vector Machine.pdf
+books.csv
