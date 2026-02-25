@@ -1,4 +1,0 @@
-This is a small sample document for testing RAG pipelines.
-It contains a few sentences about LangChain and retrieval.
-You can add more lines to improve chunking and recall.
-RAG systems fetch relevant text before generating answers.
