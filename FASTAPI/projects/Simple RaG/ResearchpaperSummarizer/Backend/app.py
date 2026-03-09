@@ -25,16 +25,16 @@ def main(Query: Query):
     
     llm = model()
     agent = create_agent(
-    model=llm,
-    tools=tools(),
-    system_prompt= prompt(),
-)
+        model=llm,
+        tools=tools(),
+        system_prompt=prompt(),
+    )
     try:
         inputs = {"messages": [{"role": "user", "content": Query.query}]}
         result = agent.invoke(inputs)
 
         answer = result["messages"][-1].content
-        return JSONResponse(status_code=200, content = {"response": answer})
+        return JSONResponse(status_code=200, content={"response": answer})
     
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
