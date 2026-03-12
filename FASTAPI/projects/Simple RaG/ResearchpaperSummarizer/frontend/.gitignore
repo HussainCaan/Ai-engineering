@@ -7,3 +7,5 @@ __pycache__/
 .DS_Store
 node_modules/
 chroma_db
+.md
+researchpaper registry credentials.txt

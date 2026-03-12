@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Backend URL
-FASTAPI_URL = "http://localhost:8000/llm"
+FASTAPI_URL = "http://researchpaper-backend.centralindia.azurecontainer.io:8000/llm"
 
 st.set_page_config(
     page_title="Research Paper Assistant",
